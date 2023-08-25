@@ -3,9 +3,11 @@
     const tasks = [
         {
             content: "nagrać odcinek na yt",
+            done: true
         },
         {
             content: "nagnek na yt",
+            done: false
         },
         {
             content: "nagnek na yt",
@@ -21,9 +23,9 @@
             <div class="listBody__lp">
                 1.
             </div>
-            <div class="listBody__checkbox">
-                <button class="listBody__checkboxGreen">
-                    ✔️
+            <div class=listBody__checkbox>
+                <button class=${task.done ? "\"listBody__checkboxGreen\"" : "listBody__checkboxRed"}>
+                    ${task.done ? "✔️" : "❌"}
                 </button>
             </div>
             <div class="listBody__task">
@@ -42,6 +44,18 @@
 
     const init = () => {
         render();
+        const form = document.querySelector(".js-form");
+        form.addEventListener("submit", () => {
+            event.preventDefault();
+            const newTaskContent = document.querySelector(".addTask__input").value.trim();
+            if (newTaskContent === "") {
+                return;
+            }
+            tasks.push({
+                content: newTaskContent,
+            });
+            render();
+        })
     };
 
     init ();
