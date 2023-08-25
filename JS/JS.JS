@@ -1,17 +1,13 @@
 {
+    const addNewTask = (newTaskContent) => {
+        tasks.push({
+            content: newTaskContent,
+        });
+        render();
+    }
 
     const tasks = [
-        {
-            content: "nagrać odcinek na yt",
-            done: true
-        },
-        {
-            content: "nagnek na yt",
-            done: false
-        },
-        {
-            content: "nagnek na yt",
-        },
+        
     ];
 
     const render = () => {
@@ -36,10 +32,17 @@
                     <img class="image" src="IMAGE/kosz.png" >
                 </button>
             </div>
-        </div>
-            `;
+        </div> `;
         }
         document.querySelector(".listBody").innerHTML = htmlString;
+
+        const removeButtons = document.querySelectorAll(".listBody__removeRed");
+        removeButtons.forEach((removeButtons, index) => {
+            removeButtons.addEventListener("click", () => {
+            tasks.splice(index, 1);
+            render();
+            })
+        })
     };
 
     const init = () => {
@@ -51,10 +54,7 @@
             if (newTaskContent === "") {
                 return;
             }
-            tasks.push({
-                content: newTaskContent,
-            });
-            render();
+            addNewTask(newTaskContent);
         })
     };
 
