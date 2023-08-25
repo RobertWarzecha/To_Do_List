@@ -1,0 +1,208 @@
+.body{
+    background-color: #bbb;
+}
+
+.header
+{
+    box-sizing: border-box;
+    margin: 50px auto;
+    background-color: hsla(180, 100%, 50%, 0.6);
+    width: 80%;
+    height: 120px;
+    border: 5px solid hsla(240, 100%, 15%, 0.5) ;
+    border-radius: 10px;
+    text-align: center;
+    padding: 15px;
+}
+
+.article{
+    box-sizing: border-box;
+    background-color: hsla(180, 100%, 50%, 0.6);
+    width: 80%;
+    border: 5px solid hsla(240, 100%, 15%, 0.5) ;
+    border-radius: 10px;
+    margin: 50px auto;
+    padding-bottom: 20px;
+}
+.listHeader{
+    font-size: x-large;
+    padding: 10px 15px 20px ;
+    margin: 15px;
+    margin-bottom: 20px;
+    border-bottom: 4px solid black;
+}
+.listBody{
+    margin: auto;
+    width: 90%;
+}
+.listBody__row{
+    height: 100px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 5fr 1fr;
+    border: 2px solid hsla(240, 100%, 15%, 0.5) ;
+}
+.listBody__lp{
+    font-size: x-large;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    background-color: hsla(180, 100%, 95%, 0.6);
+    border: 2px solid hsla(240, 100%, 15%, 0.5) ;
+}
+
+.listBody__checkbox{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    background-color: hsla(180, 100%, 95%, 0.6);
+    border: 2px solid hsla(240, 100%, 15%, 0.5) ;
+}
+.listBody__task{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    font-size: large;
+    max-height: 100px ;
+    background-color: hsla(180, 100%, 95%, 0.6);
+    border: 2px solid hsla(240, 100%, 15%, 0.5) ;
+}
+.listBody__remove{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    max-height: 100px ;
+    background-color: hsla(180, 100%, 95%, 0.6);
+    border: 2px solid hsla(240, 100%, 15%, 0.5) ;
+}
+.listBody__checkboxGreen{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    font-size: xx-large;
+    height: 70%;
+    width: 70%;
+    background-color: rgb(0, 200, 0);
+    border: 4px solid #000000;
+    border-radius: 10px;
+}
+.listBody__checkboxRed{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    font-size: xx-large;
+    height: 70%;
+    width: 70%;
+    background-color: rgb(255, 0, 0);
+    border: 4px solid #000000;
+    border-radius: 10px;
+}
+.listBody__removeRed{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    font-size: xx-large;
+    height: 70%;
+    width: 70%;
+    background-color: rgb(255, 0, 0);
+    border: 4px solid #000000;
+    border-radius: 10px;
+}
+.image{
+    height: 35px;
+    width: 35px;
+}
+.footer{
+    box-sizing: border-box;
+    margin: 20px auto 10px;
+    background-color: hsla(180, 100%, 50%, 0.6);
+    width: 80%;
+    min-height: 120px;
+    border: 5px solid hsla(240, 100%, 15%, 0.5) ;
+    border-radius: 10px;
+    padding: 15px;
+}
+.footerHeader{
+    font-size: x-large;
+    padding: 0px 15px 20px ;
+    margin: 15px;
+    margin-bottom: 20px;
+    border-bottom: 4px solid black;
+}
+.footerBody{
+    text-align: center;
+    font-size: large;
+}
+.line{
+    border-bottom: 2px solid black;
+    width: 90%;
+    margin: auto;
+    padding-top: 15px;
+    margin-bottom: 15px;
+}
+.addTask{
+    box-sizing: border-box;
+    background-color: hsla(180, 100%, 50%, 0.6);
+    width: 80%;
+    border: 5px solid hsla(240, 100%, 15%, 0.5) ;
+    border-radius: 10px;
+    padding: 20px 0px;
+    margin: auto;
+
+}
+.addTask__row
+{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: 1fr 7fr 1fr;
+    height: 100px;
+    min-width: 90%;
+    max-width: 90%;
+    border: 2px solid hsla(240, 100%, 15%, 0.5) ;    
+    margin: auto;
+}
+
+.addTask__input{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    font-size: large;
+    width: 100%;
+    height: 30px;
+}
+.addTask__item{
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    padding: 15px;
+    background-color: hsla(180, 100%, 95%, 0.6);
+    border: 2px solid hsla(240, 100%, 15%, 0.5) ;
+    font-size: x-large;
+}
+.addTask__button{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    background-color: hsla(180, 100%, 95%, 0.6);
+    border: 2px solid hsla(240, 100%, 15%, 0.5) ;
+
+}
+.addTask__buttonSend
+{
+    
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    font-size: xx-large;
+    height: 70%;
+    width: 70%;
+    background-color: rgb(255, 0, 0);
+    border: 4px solid #000000;
+    border-radius: 10px;
+}
