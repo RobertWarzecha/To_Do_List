@@ -43,6 +43,21 @@
             render();
             })
         })
+
+        const toggleDoneButtons1 = document.querySelectorAll(".listBody__checkboxRed");
+        toggleDoneButtons1.forEach((toggleDoneButtons1, index) => {
+            toggleDoneButtons1.addEventListener("click", () => {
+            tasks[index].done = !tasks[index].done;
+            render();
+            })
+        })
+        const toggleDoneButtons2 = document.querySelectorAll(".listBody__checkboxGreen");
+        toggleDoneButtons2.forEach((toggleDoneButtons2, index) => {
+            toggleDoneButtons2.addEventListener("click", () => {
+            tasks[index].done = !tasks[index].done;
+            render();
+            })
+        })
     };
 
     const init = () => {
