@@ -1,8 +1,12 @@
 {
+    let taskNumber = 0;
     const addNewTask = (newTaskContent) => {
+        taskNumber = 0;
         tasks.push({
             content: newTaskContent,
+           
         });
+        document.getElementById("myInput").value = "";
         render();
     }
 
@@ -11,16 +15,17 @@
     ];
 
     const render = () => {
-        let htmlString = "";
-        
+        let htmlString = "";;
         for (const task of tasks){
+           
+            taskNumber++;
             htmlString += 
             `<div class="listBody__row">
             <div class="listBody__lp">
-                1.
+            ${taskNumber}
             </div>
             <div class=listBody__checkbox>
-                <button class=${task.done ? "\"listBody__checkboxGreen\"" : "listBody__checkboxRed"}>
+                <button class= "js-button ${task.done ? "listBody__checkboxGreen\"" : "listBody__checkboxRed\""}>
                     ${task.done ? "✔️" : "❌"}
                 </button>
             </div>
@@ -40,30 +45,26 @@
         removeButtons.forEach((removeButtons, index) => {
             removeButtons.addEventListener("click", () => {
             tasks.splice(index, 1);
+            taskNumber = 0;
             render();
             })
         })
 
-        const toggleDoneButtons1 = document.querySelectorAll(".listBody__checkboxRed");
+        const toggleDoneButtons1 = document.querySelectorAll(".js-button");
         toggleDoneButtons1.forEach((toggleDoneButtons1, index) => {
             toggleDoneButtons1.addEventListener("click", () => {
-            tasks[index].done = !tasks[index].done;
+            tasks[index].done =! tasks[index].done;
+            taskNumber = 0;
             render();
             })
         })
-        const toggleDoneButtons2 = document.querySelectorAll(".listBody__checkboxGreen");
-        toggleDoneButtons2.forEach((toggleDoneButtons2, index) => {
-            toggleDoneButtons2.addEventListener("click", () => {
-            tasks[index].done = !tasks[index].done;
-            render();
-            })
-        })
+        
     };
 
     const init = () => {
         render();
         const form = document.querySelector(".js-form");
-        form.addEventListener("submit", () => {
+        form.addEventListener("submit", (event) => {
             event.preventDefault();
             const newTaskContent = document.querySelector(".addTask__input").value.trim();
             if (newTaskContent === "") {
